@@ -1,6 +1,6 @@
 all: build/index.html build/pandoc.css
 
-build/index.html: build/ index.md pandoc.css
+build/index.html: build/ index.md
 	pandoc -s -t html -f markdown --css=pandoc.css -o build/index.html index.md
 
 build/pandoc.css: build/ pandoc.css
